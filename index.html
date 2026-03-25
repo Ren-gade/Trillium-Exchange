@@ -8,13 +8,11 @@
   </head>
 
   <body>
-    <!-- Navigation -->
     <header>
-      <nav class="navbar" aria-label="Main Navigation">
+      <nav class="navbar">
         <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
-
         <h1 class="logo">Trillium Exchange</h1>
-
+        <button id="menuToggle" aria-label="Toggle menu">☰</button>
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="rules.html">Rules</a></li>
@@ -22,21 +20,26 @@
           <li><a href="survey.html">Join the Exchange</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div id="sidebar" class="sidebar">
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="survey.html">Join the Exchange</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-      <!-- Home / Intro -->
       <section id="home">
         <h1>Welcome to the Trillium Exchange!</h1>
-
         <p>
           This year we are leaving you free to choose the gift you feel is most
           appropriate to your recipient's persona, and your own skills and
           interests as an artisan.
         </p>
-
         <p>
           The Trillium Exchange lets our immensely talented artisans in
           Ealdormere get to know each other a little better by working on a
@@ -44,10 +47,8 @@
         </p>
       </section>
 
-      <!-- Timeline -->
       <section id="timeline" class="timeline-section">
         <h2>📅 Timeline 📅</h2>
-
         <ul class="timeline-list">
           <li><strong>Sign-ups Close:</strong> April 8</li>
           <li><strong>Matches Assigned:</strong> Apr 17 (Spring Coronation)</li>
@@ -58,65 +59,80 @@
             <strong>Delivery Deadline:</strong> September 26 (Fall Coronation)
           </li>
         </ul>
+        <p class="timeline-note">
+          You may give your recipient their gift at or before Coronation.
+        </p>
+        <p class="timeline-note">
+          Please hold off on posting progress photos until your recipient has
+          confirmed they've received their gift.
+        </p>
       </section>
-      <p class="timeline-note">
-        You may give your recipient their gift at or before Coronation.
-      </p>
 
-      <p class="timeline-note">
-        Please hold off on posting progress photos until your recipient has
-        confirmed they've received their gift.
-      </p>
-      <br />
-      <!-- About -->
       <section id="about">
         <h2>About Trillium Exchange</h2>
-
         <p>
           The Trillium Exchange is a gift exchange within Ealdormere that
           celebrates generosity, creativity, and the skills of its artisans.
           Participants are paired with another artisan and create a handcrafted
           gift tailored to their recipient's interests, hobbies, and persona.
         </p>
-
-        <p>First step is that you will fill out a survey regarding your likes, dislikes, sizes, allergies, what kind of things you do, and so on. 
-          Each participant will be matched with another artisan for whom they will create something personal. 
-          Once you receive the name of your recipient then you will have a set time to create a beautiful gift for one lucky person, spending no more than $25 for materials (plus anything already in your stash). Remember to keep your admin team updated on your progress, and if you need help or information we are here to help.
+        <p>
+          First step is that you will fill out a survey regarding your likes,
+          dislikes, sizes, allergies, what kind of things you do, and so on.
+          Each participant will be matched with another artisan for whom they
+          will create something personal. Once you receive the name of your
+          recipient then you will have a set time to create a beautiful gift for
+          one lucky person, spending no more than $25 for materials (plus
+          anything already in your stash). Remember to keep your admin team
+          updated on your progress, and if you need help or information we are
+          here to help.
         </p>
-
       </section>
 
-      <!-- Facebook -->
       <section id="facebook">
-        <h2> <img src="img/facebook.png" alt="icons created by Ruslan Babkin - Flaticon" style="width: 50px; height: 50px;"> Join Us on the Facebook Group</h2>
-
+        <h2>
+          <img
+            src="img/facebook.png"
+            alt="icons created by Ruslan Babkin - Flaticon"
+            style="width: 50px; height: 50px"
+          />
+          Join Us on the Facebook Group
+        </h2>
         <p>
           Stay up to date with announcements, connect with other participants,
           and share in the excitement.
         </p>
-
         <p>
           <a
             href="https://www.facebook.com/groups/142642069270903/"
             target="_blank"
+            >Trillium Exchange Facebook Group</a
           >
-            Trillium Exchange Facebook Group
-          </a>
         </p>
       </section>
 
-       <section id="discord">
-        <h2> <img src="img/discord.png" alt="icons created by Ruslan Babkin - Flaticon" style="width: 50px; height: 50px;"> Announcements on Discord</h2>
-
+      <section id="discord">
+        <h2>
+          <img
+            src="img/discord.png"
+            alt="icons created by Ruslan Babkin - Flaticon"
+            style="width: 50px; height: 50px"
+          />
+          Announcements on Discord
+        </h2>
         <p>
-         Announcements will be made on the Kingdom Discord under #event-and-event-promotion.
-         <p><a href="https://discord.com/channels/710861612176769114/1486165360062501028/1486165360062501028">
-          Message Thread</a> </p>
+          Announcements will be made on the Kingdom Discord under
+          #event-and-event-promotion.
         </p>
-
+        <p>
+          <a
+            href="https://discord.com/channels/710861612176769114/1486165360062501028/1486165360062501028"
+            >Message Thread</a
+          >
+        </p>
+      </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
       <p>&copy; 2026 Trillium Exchange</p>
     </footer>

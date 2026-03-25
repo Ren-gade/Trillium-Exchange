@@ -2,48 +2,42 @@
   --bg-color: #fdf6e3;
   --text-color: #2d2d2d;
   --accent: #7a9e7e;
-  --nav-bg: #b22222; /* scarlet/red */
+  --nav-bg: #b22222;
 }
 
-/* Base Layout */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
-/* Dark Mode */
 body.dark-mode {
   --bg-color: #1e1e1e;
   --text-color: #f5f5f5;
-  --nav-bg: #8b1a1a; /* darker red */
+  --nav-bg: #8b1a1a;
 }
 
-/* Navbar */
 .navbar {
-  position: relative;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  padding: 1rem;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
   background: var(--nav-bg);
   color: white;
+  position: relative;
 }
 
-/* Center Logo */
 .logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+  flex: 1;
 }
 
-/* Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -61,30 +55,62 @@ body.dark-mode {
   text-decoration: underline;
 }
 
-/* Main Content */
-main {
-  padding: 1rem;
-  flex: 1;
-}
-
-/* Global Section Spacing */
-section {
-  margin-bottom: 2rem;
-  padding: 0 1rem; /* 👈 fixes squished edges everywhere */
-}
-
-/* Dark Mode Button */
 #darkModeToggle {
   background: var(--nav-bg);
   color: white;
   border: 2px solid white;
   padding: 0.4rem 0.6rem;
-  cursor: pointer;
   border-radius: 5px;
-  margin-right: auto; /* 👈 pushes it to the far left */
+  cursor: pointer;
 }
 
-/* Footer */
+#menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 260px;
+  background: var(--nav-bg);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar .nav-links {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+
+.sidebar .nav-links a {
+  font-size: 1.2rem;
+}
+
+main {
+  padding: 1rem;
+  flex: 1;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
 .site-footer {
   text-align: center;
   padding: 1rem;
@@ -92,88 +118,53 @@ section {
   color: white;
 }
 
-.footer-subtext {
-  margin: 0.25rem 0 0;
-  font-size: 0.8rem;
-  opacity: 0.85;
-}
-
-/* Timeline */
-.timeline-section {
+.timeline-section,
+.about-section,
+.faq-section,
+.rules-section,
+.contact-section {
   max-width: 800px;
-  margin: 2rem auto;
-  line-height: 1.6;
-}
-
-.timeline-list {
-  list-style: none;
-  padding: 0;
-}
-
-.timeline-list li {
-  margin-bottom: 0.75rem;
-  padding-left: 1rem;
-  border-left: 3px solid var(--accent);
-}
-
-.timeline-note {
-  margin-top: 1rem;
-}
-
-/* Survey */
-.survey-section {
-  max-width: 900px;
   margin: 2rem auto;
   line-height: 1.6;
 }
 
 .form-container iframe {
   width: 100%;
-  height: 85vh;
+  max-width: 900px;
   min-height: 600px;
+  height: 80vh;
   border: none;
+  display: block;
+  margin: 0 auto;
 }
 
-/* About */
-.about-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  line-height: 1.6;
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  #menuToggle {
+    display: block;
+  }
+  .logo {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0 2rem;
+  }
+  .form-container iframe {
+    height: 90vh;
+    min-height: 600px;
+  }
 }
 
-/* FAQ */
-.faq-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  line-height: 1.6;
-}
-
-.faq-section h3 {
-  margin-top: 1.5rem;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.25rem;
-}
-
-body.dark-mode .faq-section h3 {
-  border-color: #555;
-}
-
-/* Rules (extra polish for readability) */
-.rules-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  line-height: 1.6;
-}
-
-.rules-list {
-  padding-left: 1.5rem;
-}
-
-.rules-list li {
-  margin-bottom: 1rem;
-}
-
-.rules-summary {
-  margin-top: 1.5rem;
-  font-weight: bold;
+@media (min-width: 769px) {
+  #menuToggle {
+    display: none;
+  }
+  .sidebar {
+    display: none;
+  }
+  .logo {
+    margin-left: 500px;
+    text-align: center;
+  }
 }

@@ -8,37 +8,46 @@
   </head>
 
   <body>
-     <header>
-      <nav class="navbar" aria-label="Main Navigation">
+    <header>
+      <nav class="navbar">
         <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
-
         <h1 class="logo">Trillium Exchange</h1>
-
-        <ul class="nav-links">
+        <ul class="nav-links desktop-nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="rules.html">Rules</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="#">Join the Exchange</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <button id="menuToggle" class="mobile-menu" aria-label="Open menu">
+          ☰
+        </button>
+        <div id="sidebar" class="sidebar">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="#">Join the Exchange</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
-<section id="survey" class="survey-section">
-  <h2>Join the Exchange</h2>
+    <section id="survey" class="survey-section">
+      <h2>Join the Exchange</h2>
 
-  <p>
-    Fill out the survey below to participate in the Trillium Exchange.
-  </p>
+      <p>Fill out the survey below to participate in the Trillium Exchange.</p>
 
-  <div class="form-container">
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdNdaII8WfNT22XYXHgOX5X-NWBrRE0nO9DVcX7iBgX451aYQ/viewform?embedded=true"
-      loading="lazy">
-      Loading…
-    </iframe>
-  </div>
-</section>
-
+      <div class="form-container">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdNdaII8WfNT22XYXHgOX5X-NWBrRE0nO9DVcX7iBgX451aYQ/viewform?embedded=true"
+          loading="lazy"
+        >
+          Loading…
+        </iframe>
+      </div>
+    </section>
+    <script src="src/script.js"></script>
     <footer class="site-footer">
       <p>&copy; 2026 Trillium Exchange</p>
     </footer>
